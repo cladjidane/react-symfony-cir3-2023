@@ -1,9 +1,9 @@
 import './App.css'
 
-import Content from './Content'
-import Footer from './Footer'
-import Header from './Header'
-import Sidebar from './Sidebar'
+import Content from './layouts/Content'
+import Footer from './layouts/Footer'
+import Header from './layouts/Header'
+import Sidebar from './layouts/Sidebar'
 
 function App() {
 
@@ -11,8 +11,8 @@ function App() {
     <div className="container-fluid p-0">
         <Header />
         <div className='row container m-auto'>
-        <Content />
-        <Sidebar />
+          <Content />
+          <Sidebar />
         </div>
         <Footer />
     </div>
