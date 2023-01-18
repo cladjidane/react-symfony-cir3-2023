@@ -9,12 +9,16 @@ function App() {
 
   return (
     <div className="container-fluid p-0">
+
         <Header />
+
         <div className='row container m-auto'>
           <Content />
           <Sidebar />
         </div>
+
         <Footer />
+
     </div>
   )
 }
