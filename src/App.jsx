@@ -9,15 +9,21 @@ import { useState } from "react";
 
 function App() {
   const [title, setTitle] = useState("Titre du content.jsx");
+  const [idProduct, setIdProduct] = useState(1);
+
+  const changeProduct = (id) => {
+    setIdProduct(id)
+  }
 
   return (
     <div className="container-fluid p-0">
       <Header level="1" />
 
       <div className="row container m-auto">
-        <Content title={title} />
+        <Content title={title} idProduct={idProduct} />
 
         <Sidebar
+          changeProduct={changeProduct}
           changeTitle={(title) => {
             setTitle(title);
           }}

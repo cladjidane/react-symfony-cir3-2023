@@ -11,15 +11,15 @@ const data = [
   { prenom: "Fabien", nom: "CANU" },
 ];
 
-const Content = ({ title }) => {
+const Content = ({ title, idProduct }) => {
   const [currentEdit, setCurrentEdit] = useState(null);
   const [res, setRes] = useState();
 
   useEffect(() => {
-    fetch('https://dummyjson.com/products/2')
+    fetch('https://dummyjson.com/products/' + idProduct)
     .then(res => res.json())
     .then(json => setRes(json))
-  }, [data]);
+  }, [idProduct]);
 
   const renderData = (res) => {
     return (
