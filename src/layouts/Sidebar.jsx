@@ -15,7 +15,7 @@ const Sidebar = ({ changeTitle }) => {
     <div className="col bg-warning">
       <input type="text" onChange={(e) => changeTitle(e.target.value)} />
 
-      {dog && <img src={dog.message} />}
+      {/*dog && <img src={dog.message} />*/}
     </div>
   );
 };

@@ -9,3 +9,13 @@ body {
 .red  {
   color: red;
 }
+
+.debug {
+  padding: 20px; 
+  background: white;
+}
+
+.res {
+  padding: 20px;
+  background: antiquewhite;
+}

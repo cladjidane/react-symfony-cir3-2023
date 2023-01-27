@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react";
+
 import Title from "../components/Title";
-import { useState } from "react";
 
 const data = [
   { prenom: "Fabien", nom: "CANU" },
@@ -12,6 +13,25 @@ const data = [
 
 const Content = ({ title }) => {
   const [currentEdit, setCurrentEdit] = useState(null);
+  const [res, setRes] = useState();
+
+  useEffect(() => {
+    fetch('https://dummyjson.com/products/2')
+    .then(res => res.json())
+    .then(json => setRes(json))
+  }, [data]);
+
+  const renderData = (res) => {
+    return (
+      <div className="res">
+        <h2>{res.title}</h2> 
+        <p>{res.description}</p> 
+        <p>PRIX : {res.price} $</p> 
+        <div className="debug">
+          <b>DEBUG</b><pre>{JSON.stringify(res, null, 2)}</pre></div>
+      </div>
+    )
+  }
 
   const renderUser = () =>
     data.map((user, i) => (
@@ -29,10 +49,12 @@ const Content = ({ title }) => {
 
   return (
     <section id="about" className="col-8">
-      <div class="container px-4">
-        <div class="row gx-4 justify-content-center">
-          <div class="col-lg-8">
+      <div className="container px-4">
+        <div className="row gx-4 justify-content-center">
+          <div className="col-lg-8">
             <Title level={2} title={title} />
+            
+            {res && renderData(res)}
 
             {renderUser()}
 
