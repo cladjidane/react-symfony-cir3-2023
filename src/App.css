@@ -15,7 +15,20 @@ body {
   background: white;
 }
 
-.res {
+#about {
   padding: 20px;
   background: antiquewhite;
+}
+
+.img {
+  margin-bottom: 10px;
+}
+
+.sidebar {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.sidebar p {
+  margin: 0;
 }

@@ -7,9 +7,10 @@ const Title = ({ level, title }) => {
     );
   else if (level === 2)
     return (
-      <div class="container px-4 text-center">
+      <>
         <h2 class="fw-bolder">{title}</h2>
-      </div>
+        <hr />
+      </>
     );
 };
 

@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 function App() {
-  const [title, setTitle] = useState("Titre du content.jsx");
+  const [title, setTitle] = useState("Product");
   const [idProduct, setIdProduct] = useState(1);
 
   const changeProduct = (id) => {
